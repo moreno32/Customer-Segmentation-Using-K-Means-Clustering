@@ -4,7 +4,7 @@
 This project focuses on applying customer segmentation techniques on historical customer data using K-Means clustering. The aim is to partition the customer base into groups based on their characteristics and allocate marketing resources effectively.
 
 ![Category and Subcategory](https://img.shields.io/badge/Data%20Analysis%20and%20prediction-Clustering-blue)
-![Category and Subcategory](https://img.shields.io/badge/Clustering-K-Means%20clustering-yellow)
+![Category and Subcategory](https://img.shields.io/badge/Data%20Analysis%20and%20prediction-K%20Means%20clustering-yellow)
 
 ## 🖼️ Images of the Project:
 <img align="center" alt="jpg" src="https://raw.githubusercontent.com/moreno32/Customer-Segmentation-Using-K-Means-Clustering/master/reports/figures/Customer-Segmentation-Using-K-Means-Clustering.png" width="500" height="449" /><br>
