@@ -1,64 +1,99 @@
-# Customer Segmentation Using K-Means Clustering
+# Personalized E-commerce Recommendation System
 
-## 🔄 Overview:
-This project focuses on applying customer segmentation techniques on historical customer data using K-Means clustering. The aim is to partition the customer base into groups based on their characteristics and allocate marketing resources effectively.
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Streamlit](https://img.shields.io/badge/streamlit-1.25.0-red.svg)](https://streamlit.io/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3.0-orange.svg)](https://scikit-learn.org/)
 
-![Category and Subcategory](https://img.shields.io/badge/Data%20Analysis%20and%20prediction-Clustering-blue)
-![Category and Subcategory](https://img.shields.io/badge/Clustering-K-Means%20clustering-yellow)
+A Streamlit application demonstrating customer segmentation using RFM analysis and K-means clustering, leading to targeted product recommendations.
 
-## 🖼️ Images of the Project:
-<img align="center" alt="jpg" src="https://raw.githubusercontent.com/moreno32/Customer-Segmentation-Using-K-Means-Clustering/master/reports/figures/Customer-Segmentation-Using-K-Means-Clustering.png" width="500" height="449" /><br>
+## Features
 
-## 🎊 Motivation:
-Customer segmentation is a crucial strategy for businesses as it helps in targeting specific groups of customers and retain high-profit, low-risk customers. This project aims to demonstrate the practical implementation of K-Means clustering for customer segmentation.
+- **RFM Analysis**: Calculates Recency, Frequency, and Monetary value for customers.
+- **Data Loading**: Supports example data and CSV uploads with validation.
+- **Synthetic Data Fallback**: Generates realistic synthetic data if downloads fail or data is too small.
+- **Data Exploration**: Visualizes customer behavior with:
+    - Average RFM metrics.
+    - Histograms for individual RFM distributions (including log-transformed views).
+    - 2D Scatter plots showing relationships between RFM variables.
+- **Ad-hoc Customer Segmentation**:
+    - Uses K-means clustering.
+    - Allows users to **select 1-3 features** (Recency, Frequency, Monetary) for clustering.
+    - Optional Elbow Method analysis to suggest an optimal K.
+    - Clear display of segment profiles with business-oriented descriptions (e.g., "⭐ VIP Customers", "⚠️ At Risk").
+    - Technical visualizations (3D Plot - conditional, Individual Radar Charts) available in an expander.
+- **Targeted Product Recommendations**: 
+    - Generates recommendations based on segment purchase history.
+    - Presents top recommendations visually.
+- **Interactive Demo**: Simulates customer profiles (RFM) to predict segments and show corresponding recommendations (requires segmentation with R, F, M).
+- **Stakeholder-Focused Interface**: Clean design, clear explanations, and actionable insights emphasized throughout the workflow.
 
-## 🏁 Learning Objectives:
-1)	Understanding the concept of customer segmentation
-2)	Familiarizing with the K-Means clustering algorithm
-3)	Pre-processing the customer dataset for modeling
-4)	Applying K-Means clustering for customer segmentation
-5)	Interpreting the insights from the clustering results.
+## Quick Start
 
-## ⚙️ Technical Aspects:
-This project uses Python programming language and libraries:
+1.  **Clone:** `git clone <your-repo-url>`
+2.  **Navigate:** `cd <repo-folder>`
+3.  **Install:** `pip install -r requirements.txt`
+4.  **Run:** `streamlit run app/main.py` (Recommended over `python run_app.py` if issues arise)
+5.  **Access:** Open browser to `http://localhost:8501` (or the URL provided).
 
-## 🧰 Technology used:
-This project uses Python programming language and the following libraries:
-1)	Pandas
-2)	Matplotlib
-3)	Numpy
-4)	Seaborn
-5)	Scikit-learn
-6)	Scipy
-7)	Itertools
-8)	Pylab
+## Using the Application
 
-## 📚 Data Source:
-The customer data used in this project is obtained from the file "Cust_Segmentation.csv".
+The application workflow guides you through these steps:
 
-## 🗂️ Project Structure:
-The project will consist of the following stages.
-1)	Introduction
-2)	Importing the required libraries
-3)	Downloading the customer data
-4)	K-Means on a randomly generated dataset
-5)	Setting up K-Means
-6)	Creating the visual plot
-7)	Customer Segmentation with K-Means
-8)	Pre-processing the data
-9)	Modeling
-10)	Insights and conclusion
+1.  **Load & Prepare Data**: Choose example data or upload a validated CSV. Set parameters (K, Reference Date) and confirm.
+2.  **Exploring Customer Behavior**: Understand RFM concepts. View average metrics, distribution histograms, and relationship scatter plots.
+3.  **Customer Segmentation**: Select features (R, F, M, or a subset), optionally analyze K, choose K, and run segmentation. View segment profiles and descriptions.
+4.  **Product Recommendations**: Select a generated segment to see tailored product suggestions.
+5.  **Interactive Demo**: Adjust RFM sliders to simulate a customer, predict their segment, and see relevant recommendations (only if RFM were used for segmentation).
 
-## 👥 Credits:
-This project is a self-practice project and all the code has been written from scratch.
+## Dataset
 
-## 🔗 Links:
+- Uses the [Online Retail Dataset](https://archive.ics.uci.edu/ml/datasets/online+retail) by default.
+- Includes a robust synthetic data generator as a fallback and for demonstration.
+- Supports uploading custom CSV files with `CustomerID`, `InvoiceDate`, `Quantity`, `UnitPrice` columns.
 
-**Link to Repository**: https://github.com/moreno32/Customer-Segmentation-Using-K-Means-Clustering.git
+## Project Structure 
 
-## 🙋‍♂️ Contact me:
-<a href= mailto:danielmoreno3291@gmail.com> <img align="center" alt="Abhishek's LinkedIN" width="32px" src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" >
-<a href="https://www.linkedin.com/in/dmoreno-ai/"> <img align="center" alt="Abhishek's LinkedIN" width="32px" src="https://cdn-icons-png.flaticon.com/512/174/174857.png">
-<a href="https://www.youtube.com/@dmoreno-ai"> <img align="center" alt="Abhishek's LinkedIN" width="32px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/YouTube_social_white_squircle.svg/2048px-YouTube_social_white_squircle.svg.png" /><br>
+(Structure remains largely the same as previously documented, main files are within `app/`)
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/dmoreno_ai)
+```
+ecommerce-recommendation-system/
+├── app/               # Main application code
+│   ├── main.py        # Main Streamlit application logic & UI
+│   ├── data.py        # Data loading, cleaning, synthetic generation, RFM calculation
+│   ├── clustering.py  # K-Means, Elbow method, Profile creation
+│   ├── recommender.py # Recommendation logic
+│   ├── visualization.py # Plotly visualization functions
+│   ├── utils.py       # Helper functions (page setup, formatting)
+│   └── styles.py      # Styling constants (e.g., COLORS)
+├── data/              # Default directory for downloaded data
+├── docs/              # Project documentation
+├── tests/             # Unit/Integration tests (if applicable)
+├── run_app.py         # Original application runner (may have environment issues)
+├── requirements.txt   # Project dependencies
+└── README.md          # This file
+```
+
+## Technical Details
+
+- **Core Libraries**: Streamlit (v1.25.0 specified in requirements), Pandas, Numpy, Scikit-learn, Plotly.
+- **Methodology**: RFM Analysis, K-Means Clustering, Basic Recommendation Logic (e.g., top products per segment).
+
+## Running Tests
+
+(Assuming tests exist and `run_tests.py` is configured)
+```bash
+python run_tests.py 
+```
+Or directly:
+```bash
+python -m pytest tests/
+```
+
+## License
+
+MIT License - see the LICENSE file.
+
+## Acknowledgments
+
+- Dataset provided by UCI Machine Learning Repository
+- Built with Streamlit, scikit-learn, and Plotly

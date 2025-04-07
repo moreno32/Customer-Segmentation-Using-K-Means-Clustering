@@ -1,0 +1,15 @@
+InvoiceNo,StockCode,Description,Quantity,InvoiceDate,UnitPrice,CustomerID,Country
+A001,P1,White Coffee Mug,2,2020-01-15,12.99,C1,USA
+A001,P2,Black Tea Set,1,2020-01-15,24.99,C1,USA
+A001,P3,Silver Photo Frame,1,2020-01-15,18.5,C1,USA
+A001,P4,Decorative Candle,3,2020-01-15,8.99,C1,USA
+A001,P5,Ceramic Vase,1,2020-01-15,15.99,C1,USA
+A002,P1,White Coffee Mug,1,2020-02-20,12.99,C2,USA
+A002,P3,Silver Photo Frame,2,2020-02-20,18.5,C2,USA
+A002,P6,Glass Water Bottle,2,2020-02-20,10.99,C2,USA
+A003,P2,Black Tea Set,1,2020-03-05,24.99,C3,USA
+A003,P5,Ceramic Vase,1,2020-03-05,15.99,C3,USA
+A003,P7,Wooden Serving Bowl,1,2020-03-05,22.5,C3,USA
+A003,P8,Stainless Steel Cutlery,2,2020-03-05,34.99,C3,USA
+A004,P1,White Coffee Mug,3,2020-04-12,12.99,C1,USA
+A004,P9,Wool Throw Blanket,1,2020-04-12,29.99,C1,USA
