@@ -54,3 +54,11 @@
 *(Optional: Add a better screenshot of the actual running application here)*
 
 ![Placeholder Screenshot](https://www.datascience-pm.com/wp-content/uploads/2018/09/cluster-1.png)
+
+## License
+
+MIT License - see `LICENSE` file.
+
+--- 
+
+![Application Screenshot](docs/assets/app_screenshot.png)
